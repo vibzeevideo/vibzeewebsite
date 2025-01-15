@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibzee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="transparentLogo.png" alt="Vibzee Logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#whitepaper">White Paper</a></li>
+                <li><a href="#pitchdeck">Pitch Deck</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Vibzee</h1>
+        <p>Next-Gen Social Video Platform. Read our White Paper <a href="whitePaper.pdf" target="_blank">here.</a> View
+            our Pitch Deck <a href="path_to_pitch_deck.pdf" target="_blank">here.</a>
+        </p>
+        <p>If you'd like to get in touch, please email us at <a
+                href="mailto:vibzeefounder@gmail.com">vibzeefounder@gmail.com</a></p>
+    </section>
+
+    <section id="contributor">
+        <h2>Join Our Team</h2>
+        <p>We are looking for engineers who want to build the Next Gen of short form video content.</p>
+        <button id="contributorBtn">I'm interested in joining the team</button>
+    </section>
+
+    <section id="signup">
+        <h2>Get on our Beta user waitlist</h2>
+        <p>If you want to be one of our first users, fill out the form below.</p>
+        <button id="betaUserBtn">I want to become a Beta User</button>
+    </section>
+
+    <!-- Modal for Beta User -->
+    <div id="betaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeBetaModal">&times;</span>
+            <h2>Beta User Sign Up</h2>
+            <!-- Embed the Google Form here -->
+            <iframe src="https://forms.gle/jTbyZmrXsMr9ubF88" width="640" height="480" frameborder="0" marginheight="0"
+                marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
+    <!-- Modal for Contributor -->
+    <div id="contributorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeContributorModal">&times;</span>
+            <h2>Contributor Sign Up</h2>
+            <!-- Embed the Google Form here -->
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc8z5MFmVeSh9m-tdEVMaZ7zka5zserQNorRcWpXiv83uOdyg/viewform?usp=sharing"
+                width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Vibzee. All rights reserved.</p>
+        <a href="https://github.com/yourusername/vibzee" target="_blank">
+            <img src="github-fill.svg" alt="GitHub" style="height: 45px;">
+        </a>
+        <a href="mailto:vibzeefounder@gmail.com">
+            <img src="email.png" alt="Email" style="height: 45px; margin-top: 10px;">
+        </a>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

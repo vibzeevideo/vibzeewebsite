@@ -1,0 +1,213 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    background-color: #330055; /* Solid background color */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23330055' cx='50' cy='0' r='50'/%3E%3Cg fill='%233a015d' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23410165' cx='50' cy='100' r='50'/%3E%3Cg fill='%2348026e' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23500376' cx='50' cy='200' r='50'/%3E%3Cg fill='%2357047e' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%235f0587' cx='50' cy='300' r='50'/%3E%3Cg fill='%2367068f' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%236f0798' cx='50' cy='400' r='50'/%3E%3Cg fill='%237707a0' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%238008a9' cx='50' cy='500' r='50'/%3E%3Cg fill='%238909b1' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%239109ba' cx='50' cy='600' r='50'/%3E%3Cg fill='%239a09c3' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a309cb' cx='50' cy='700' r='50'/%3E%3Cg fill='%23ad09d4' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b608dc' cx='50' cy='800' r='50'/%3E%3Cg fill='%23c007e5' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c905ee' cx='50' cy='900' r='50'/%3E%3Cg fill='%23d303f6' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23D0F' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed; /* Keeps background fixed while scrolling */
+    background-size: contain; /* Ensures the pattern is contained */
+    background-position: center;
+    color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent dark background for header */
+    border-bottom: 2px solid #9c4dcc;
+}
+
+header img {
+    max-height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff4081; /* Accent color on hover */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    background-color: #9c4dcc;
+}
+
+/* Modal styles */
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* Centered on the page */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust width */
+    max-width: 900px; /* Maximum width */
+    height: auto; /* Adjust height to fit content */
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Optional: Ensure the iframe fits well inside the modal */
+iframe {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    border: none;
+}
+
+
+form input, form button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form input:focus, form button:focus {
+    outline: none;
+    border-color: #9c4dcc;
+}
+
+footer {
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Ensure footer takes full width */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+footer img {
+    height: 40px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    /* Hide navigation links and only show the logo */
+    header nav {
+        display: none; /* Hide navigation links */
+    }
+
+    /* Adjust header for mobile */
+    header {
+        justify-content: center; /* Center the logo */
+    }
+
+    /* Adjust logo size */
+    header img {
+        max-height: 40px; /* Smaller logo on mobile */
+    }
+
+    section h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        padding: 12px 25px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
